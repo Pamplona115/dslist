@@ -2,6 +2,7 @@ package com.jpgames.dslist.entidades;
 
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,27 +15,38 @@ public class Game {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String titulo;
-	private Integer ano;
-	private String genero;
-	private String plataforma;
+	private String title;
+	@Column(name = "game_year")
+	private Integer year;
+	private String genre;
+	
+	private String platforms;
+	private Double score;
 	private String imgUrl;
-	private String shortDescrip;
-	private String longDescrip;
+	@Column(columnDefinition = "TEXT")
+	private String shortDescription;
+	@Column(columnDefinition = "TEXT")
+	private String longDescription;
 	
 	public Game() {
 	}
-	public Game(Long id, String titulo, Integer ano, String genero, String plataforma, String imgUrl, String shortDescrip, String longDescrip) {
-		this.id = id;
-		this.titulo = titulo;
-		this.ano = ano;
-		this.genero = genero;
-		this.plataforma = plataforma;
-		this.imgUrl = imgUrl;
-		this.shortDescrip = shortDescrip;
-		this.longDescrip = longDescrip;
-	}
 	
+	
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
+			String shortDescription, String longDescription) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.year = year;
+		this.genre = genre;
+		this.platforms = platforms;
+		this.score = score;
+		this.imgUrl = imgUrl;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
+	}
+
+
 	public Long getId() {
 		return id;
 	}
@@ -42,28 +54,28 @@ public class Game {
 		this.id = id;
 	}
 	public String getTitulo() {
-		return titulo;
+		return title;
 	}
 	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+		this.title = titulo;
 	}
 	public Integer getAno() {
-		return ano;
+		return year;
 	}
 	public void setAno(Integer ano) {
-		this.ano = ano;
+		this.year = ano;
 	}
 	public String getGenero() {
-		return genero;
+		return genre;
 	}
 	public void setGenero(String genero) {
-		this.genero = genero;
+		this.genre = genero;
 	}
 	public String getPlataforma() {
-		return plataforma;
+		return platforms;
 	}
 	public void setPlataforma(String plataforma) {
-		this.plataforma = plataforma;
+		this.platforms = plataforma;
 	}
 	public String getImgUrl() {
 		return imgUrl;
@@ -72,20 +84,28 @@ public class Game {
 		this.imgUrl = imgUrl;
 	}
 	public String getShortDescrip() {
-		return shortDescrip;
+		return shortDescription;
 	}
 	public void setShortDescrip(String shortDescrip) {
-		this.shortDescrip = shortDescrip;
+		this.shortDescription = shortDescrip;
 	}
 	public String getLongDescrip() {
-		return longDescrip;
+		return longDescription;
 	}
 	public void setLongDescrip(String longDescrip) {
-		this.longDescrip = longDescrip;
+		this.longDescription = longDescrip;
 	}
+	public Double getScore() {
+		return score;
+	}
+	public void setScore(Double score) {
+		this.score = score;
+	}
+
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(score);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -96,6 +116,7 @@ public class Game {
 		if (getClass() != obj.getClass())
 			return false;
 		Game other = (Game) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(score, other.score);
 	}
+	
 }
