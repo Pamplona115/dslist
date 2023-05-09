@@ -53,28 +53,28 @@ public class Game {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getTitulo() {
+	public String getTitle() {
 		return title;
 	}
-	public void setTitulo(String titulo) {
+	public void setTitle(String titulo) {
 		this.title = titulo;
 	}
-	public Integer getAno() {
+	public Integer getYear() {
 		return year;
 	}
-	public void setAno(Integer ano) {
+	public void setYear(Integer ano) {
 		this.year = ano;
 	}
-	public String getGenero() {
+	public String getGenre() {
 		return genre;
 	}
-	public void setGenero(String genero) {
+	public void setGenre(String genero) {
 		this.genre = genero;
 	}
-	public String getPlataforma() {
+	public String getPlatforms() {
 		return platforms;
 	}
-	public void setPlataforma(String plataforma) {
+	public void setPlatforms(String plataforma) {
 		this.platforms = plataforma;
 	}
 	public String getImgUrl() {
