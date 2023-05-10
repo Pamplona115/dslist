@@ -20,6 +20,6 @@ public class GameController {
 	public List<GameMinDTO> findAll(){
 		List<GameMinDTO> r = gameService.findAll();
 		return r;
-	}
+	} 
 
 }
