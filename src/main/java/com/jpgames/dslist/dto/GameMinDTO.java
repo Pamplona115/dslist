@@ -1,8 +1,8 @@
-package com.jpgames.dslist.DTO;
+package com.jpgames.dslist.dto;
 
 import com.jpgames.dslist.entidades.Game;
 
-public class gameMinDTO {
+public class GameMinDTO {
 	
 	private Long id;
 	private String title;
@@ -10,10 +10,10 @@ public class gameMinDTO {
 	private String imgUrl;
 	private String shortDescription;
 	
-	public gameMinDTO() {
+	public GameMinDTO() {
 	}
 
-	public gameMinDTO(Game entity) {
+	public GameMinDTO(Game entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
 		this.year = entity.getYear();
