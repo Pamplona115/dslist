@@ -83,16 +83,16 @@ public class Game {
 	public void setImgUrl(String imgUrl) {
 		this.imgUrl = imgUrl;
 	}
-	public String getShortDescrip() {
+	public String getShortDescription() {
 		return shortDescription;
 	}
-	public void setShortDescrip(String shortDescrip) {
+	public void setShortDescription(String shortDescrip) {
 		this.shortDescription = shortDescrip;
 	}
-	public String getLongDescrip() {
+	public String getLongDescription() {
 		return longDescription;
 	}
-	public void setLongDescrip(String longDescrip) {
+	public void setLongDescription(String longDescrip) {
 		this.longDescription = longDescrip;
 	}
 	public Double getScore() {

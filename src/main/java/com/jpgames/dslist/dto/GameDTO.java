@@ -7,7 +7,7 @@ import com.jpgames.dslist.entidades.Game;
 public class GameDTO {
 	
 	private Long id;
-	private String title;
+	private String tittle;
 	private Integer year;
 	private String genre;
 	private String platforms;
@@ -21,8 +21,7 @@ public class GameDTO {
 
 	public GameDTO(Game entity) {
 		BeanUtils.copyProperties(entity, this);
-		this.shortDescription = entity.getShortDescrip();
-		this.longDescription = entity.getLongDescrip();
+		
 	}
 
 	public Long getId() {
@@ -34,11 +33,11 @@ public class GameDTO {
 	}
 
 	public String getTitle() {
-		return title;
+		return tittle;
 	}
 
 	public void setTitle(String title) {
-		this.title = title;
+		this.tittle = title;
 	}
 
 	public Integer getYear() {
